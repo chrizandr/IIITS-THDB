@@ -11,135 +11,172 @@
 
     <title>IIITS-THDB</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Theme CSS -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
-
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below.  -->
-    <!--header class="intro-header" style="background-image: url('img/clg.png')"-->
-        <div class="container" id="divc">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>IIITS Telugu Handwriting Database</h1>
-                        <hr>
-                        <hr>
-                    </div>
-                </div>
-            </div>
+    <div class="container" id="divc">
+        <div class="site-heading">
+            <h1>
+                <img src='img/logo.jpg' width="90" height="90">
+                IIITS Telugu Handwriting Database
+            </h1>
         </div>
-    <!--/header-->
+    </div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-preview">
+                <h3 class="post-title">
+                    Introduction
+                </h3>
+                <p>
+                    The IIITS-THDB is the IIITS-Telugu Handwriting database. It is a collection of 450 Telugu handwriting samples written by 150 writers.
+                    The database was created as part of the work done for [add paper reference]. This database may be used for non-commercial research and educational purpose only.
+                    If you publish material based on this database, we request you to include a reference to paper [add paper reference].
+                </p>
+            </div>
+         <div class="post-preview">
+              <h3 class="post-title">
+                  Telugu Script Overview
+              </h3>
+              <p>
+                  The telugu writing system is an Abugida or a segmental writing system in which each unit of the script consists of both a consonant and a vowel.
+                  This is different from a full alphabet script  such  as  English,  where  both  vowels  and  consonants are given equal status.
+                  Although vowels in Telugu are written independently wherever required, their use in the independent form is usually limited.
+                  More than 800 million users around the globe use Telugu and it is one of the most prominent languages in India and Asia.
+                  Characteristics of the script are quite unique and at a glance, one can see that the characters and symbols in the language are rounded in shape.
+                  The Telugu script comprises of smooth rounded curves that are joined together to create characters.
+                  The script does not include any vertical strokes or sharp junctions at regions of change in trajectory.
+                  The change in trajectory in Telugu writing is smoothened out by elongating the curve at the point of change.
+                  Spatial positioning of strokes is also an important factor while writing Telugu, as is the case with most Indian languages.
+                  A more detailed analysis of various Indian scripts is done in <a href="#ref1" style="text-decoration: none;">[1]</a>.
+              </p>
+              <div class="imgContainer">
+                  <figure>
+                      <img src='img/sample.png' width="600" height="200">
+                      <figcaption style="font-size:80%;">
+                          Fig 1. Telugu Script sample
+                      </figcaption>
+                  </figure>
+              </div>
+          </div>
+          <!-------------------------------------------------------------------------------------------->
+          <hr>
+          <!-------------------------------------------------------------------------------------------->
+          <div class="post-preview">
+              <h3 class="post-title">
+                  IIITS - THDB
+              </h3>
+              <p>
+                  IIITS-THDB is the IIITS-Telugu Handwriting Database. As part of the work done for this paper, we collected samples of offline Telugu handwriting for writer identification.
+                  To the best of the author’s knowledge, no standard dataset for handwritten offline text exists for the Telugu language.
+                  For the purpose of writer identification, we collected a set of 450 handwritten Telugu pages from a total of 150 writers, with 3 pages written by each writer.
+                  A total of 20 Telugu paragraphs were collected from textbooks, ancient scripts, newspapers and online articles to capture diverse combinations of slangs, wordings and writing styles.
+                  Each writer was given 3 of the 20 paragraphs at random to write, ensuring that no two pages written by a writer have the same content.
+                  Each writer was also given a blue color ball point pen for writing to minimise noise caused by external factors.
+                  Writers were mostly students with around 75 writers in the 15-17 years age group, 65 writers in the 19-25 years age group and the remaining writers greater than 25 years of age.
+                  There were almost equal amounts of male and female writers in the considered group.
+                  <br>
+                  <br>
+                  The collected handwritten documents were scanned at 300 dpi, converted to grayscale, binarized using Otsu's algorithm <a href="#ref2" style="text-decoration: none;">[2]</a> and annotated manually.
+                  The handwritten part of each document was extracted using projection profiles and bounding box detection.
+                  Both the extracted handwritten parts and the original collected documents are publicly available to use for research in handwriting or any other related fields.
+              </p>
+              <div class="imgContainer">
+                  <figure>
+                      <img src='img/a-0.png' width="300" height="300"><br><br>
+                      <figcaption style="font-size:80%;">Fig 2. Sample scanned and segmented image</figcaption>
+                  <figure>
+              </div>
+          </div>
+          <!-------------------------------------------------------------------------------------------->
+          <hr>
+          <!-------------------------------------------------------------------------------------------->
+          <div class="post-preview">
+                <h3 class="post-title">
+                        Naming convention
+                </h3>
+                <p>
+                    <b>There are 2 files available for download.</b>
+                    <br>
+                    The file <b>documents.zip</b> contains the raw scanned grayscale documents.
+                    Each of these documents have been scanned in batches and the naming conventionsa are batch wise.
+                    The first letter enumerates the batch in which the document was scanned and the numbers following the underscore denote the document number.
+                    <br>
+                    <br>
+                    The file segment.zip contains the extracted handwritten part of each document.
+                    Each file in <b>segment.zip</b> has the same name as the coresponding scanned document in documents.zip.
+                    <br>
+                    <br>
+                    Apart from this, each <b>*.zip</b> file contains a <b>writerids.csv</b> file that contains the annotations of the scanned images in the zip file.
+                    The writerids.csv file contains two columns, the first column denotes the filename, the second denotes the ID of the writer.
+                    Documents with same ID have been written by the same writer.
+                </p>
+            </div>
+            <!-------------------------------------------------------------------------------------------->
+            <hr>
+            <!-------------------------------------------------------------------------------------------->
+            <div class="post-preview">
+                <h3 class="post-title">
+                    Download Section
+                </h3>
+                <p>Click on one of buttons below to download the data. </p>
+                    <form method="get" action="server.py.orig.zip">
+                        <button class="btn btn-default" type="submit">
+                            documents.zip
+                        </button>
+                    </form>
+                    <br>
+                    <form method="get" action="server.py.orig.zip">
+                        <button class="btn btn-default" type="submit">
+                            segment.zip
+                        </button>
+                    </form>
+            </div>
+            <!-------------------------------------------------------------------------------------------->
+            <hr>
+            <!-------------------------------------------------------------------------------------------->
+            <div class="post-preview">
+                <h3 class="post-title">
+                    References
+                </h3>
+                <p id="ref1">
+                    [1] C. Jawahar and A. Balasubramanian, “Synthesis of online handwritingin  indian  languages,”  in Tenth International Workshop on Frontiers inHandwriting Recognition, Suvisoft, 2006.
+                </p>
+                <p id="ref2">
+                    [2] N. Otsu, “A threshold selection method from gray-level histograms,”Automatica, vol. 11, no. 285-296, pp. 23–27, 1975.
+                </p>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
 
-    <!-- Main Content -->
+
+<footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="post-preview">
-                      <h2 class="post-title">
-                          Telugu Script Overview
-                      </h2>
-                      <p>The telugu writing system is an Abugida or a segmental writing system in which each unit of the script consists of both a consonant and a vowel. This is different from a full alphabet script  such  as  English,  where  both  vowels  and  consonants are given equal status. Although vowels in Telugu are written independently wherever required, their use in the independent form is usually limited. More than 800 million users around the globe use Telugu and it is one of the most prominent languages in India and Asia. Characteristics of the script are quite unique and at a glance, one can see that the characters and symbols in the language are rounded in shape. The Telugu script comprises of smooth rounded curves that are joined together to create characters. The script does not include any vertical strokes or sharp junctions at regions of change in trajectory. The change in trajectory in Telugu writing is smoothened out by elongating the curve at the point of change. Spatial positioning of strokes is also an important factor while writing Telugu, as is the case with most Indian languages. A more detailed analysis of various Indian scripts is done in <a href="#ref1">[1]</a>.</p>
-                      <div class="imgContainer">
-                      <figure>
-                        <img src='img/script.png' width="300" height="200">
-                        <figcaption>Fig 1. Telugu Script sample </figcaption>
-                      </figure>
-                    </div>
-                  <!--p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p-->
-              </div>
-                <div class="post-preview">
-                        <h2 class="post-title">
-                            IIITS - THDB
-                        </h2>
-                        <p>IIITS-THDB is the IIITS-Telugu Handwriting Database. As part of the work done for this paper, we collected samples of offline Telugu handwriting for writer identification. To the best of the author’s knowledge, no standard dataset for handwritten offline text exists for the Telugu language. For the purpose of writer identification, we collected a set of 450 handwritten Telugu pages from a total of 150 writers, with 3 pages written by each writer.
-A total of 20 Telugu paragraphs were collected from textbooks, ancient scripts, newspapers and online articles to capture diverse combinations of slangs, wordings and writing styles. Each writer was given 3 of the 20 paragraphs at random to write, ensuring that no two pages written by a writer have the same content. Each writer was also given a blue color ball point pen for writing to minimise noise caused by external factors. Writers were mostly students with around 75 writers in the 15-17 years age group, 65 writers in the 19-25 years age group and the remaining writers greater than 25 years of age. There were almost equal amounts of male and female writers in the considered group.
-
-The collected handwritten documents were scanned at 300 dpi, converted to grayscale, binarized using Otsu's algorithm<a href="#ref2">[2]</a> and annotated manually. The handwritten part of each document was extracted using projection profiles and bounding box detection. Both the extracted handwritten parts and the original collected documents are publicly available to use for research in handwriting or any other related fields.</p>
-                          <!--p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p-->
-
-                      <div class="imgContainer">
-                          <figure>
-                          <img src='img/a-0.png' width="300" height="300">
-                          <figcaption>Fig 2. Sample scanned and segmented image</figcaption>
-                          <figure>
-                        </div>
-
-                </div>
-                <div class="post-preview">
-                        <h2 class="post-title">
-                            Naming convention
-                        </h2>
-                        <p>Write naming convetion here hjhjbbbjjjjjjjjjjjjjjjjjbkjjkkhbhyuhjkkjjj jbkj jhuyb n mjuhbjhnm hgjhjn jn hjkn </p>
-                    <!--p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p-->
-                </div>
-                <div class="post-preview">
-                        <h2 class="post-title">
-                            Download Section
-                        </h2>
-                        <p>Click on the download button below to download the dataset. </p>
-                          <form method="get" action="server.py.orig.zip">
-                            <button class="btn btn-default" type="submit">Download</button>
-                          </form>
-                    <!--p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p-->
-                </div>
-                <hr>
-                <div class="post-preview">
-                        <h2 class="post-title">
-                            References
-                        </h2>
-                          <p id="ref1">[1] C. Jawahar and A. Balasubramanian, “Synthesis of online handwritingin  indian  languages,”  inTenth International Workshop on Frontiers inHandwriting Recognition, Suvisoft, 2006.</p>
-                          <p id="ref2">[2] N. Otsu, “A threshold selection method from gray-level histograms,”Automatica, vol. 11, no. 285-296, pp. 23–27, 1975.</p>
-                    <!--p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p-->
-                </div>
-                <hr>
+                <p class="copyright text-muted">
+                    Copyright &copy; IIITS 2017
+                </p>
             </div>
         </div>
     </div>
+</footer>
 
-    <hr>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p class="copyright text-muted">Copyright &copy; IIITS 2017</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+<script src="js/clean-blog.min.js"></script>
 
 </body>
 
